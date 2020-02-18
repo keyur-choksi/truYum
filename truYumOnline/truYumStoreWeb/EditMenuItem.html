@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/script.js"></script>
+    <title>truYum</title>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-company-red">
+        <ul class="navbar-nav">
+            <li class="navbar-item">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="images/logo.jpg" alt="Logo" />
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-brand" href="#">truYum</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="MenuItemListCustomer.html">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Cart.html">Cart</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Form -->
+    <div class="form-style">
+
+
+        <h1>Edit Menu Items</h1>
+
+        <form  method="get" action="EditMenuItemStatus.html" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="price">Price (₹)</label>
+                    <input type="text" class="form-control" name="price" id="price"/>
+                </div>
+
+                <div class="form-group" style="margin: 0px 20px;">
+                    <label for="inStock">Active</label><br />
+                    <div style="padding: 5px;">
+                    <input type="radio" name="inStock" id="inStock" value="yes" checked/><label for="inStock">Yes</label>&nbsp;&nbsp;
+                    <input type="radio" name="inStock" id="inStock2" value="no" /><label for="inStock2">No</label>
+                    </div>
+                </div> 
+
+                <div class="form-group" style="margin: 0px 20px;">
+                    <label for="dateOfLaunch">Date of Launch</label>
+                    <input type="date" name="dateOfLaunch" id="dateOfLaunch" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select name="category" id="category" class="form-control">
+                        <option value="Choose" selected>Choose</option>
+                        <option value="Starters">Starters</option>
+                        <option value="Main Course">Main Course</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Drinks">Drinks</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" name="checkbox" id="checkbox" class="form-check-input">
+                <label for="checkbox" class="form-check-label">Free Delivery</label>
+            </div>
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="bg-info">
+            Copyright &copy; 2020
+        </div>
+    </footer>
+</body>
+</html>
